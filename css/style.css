@@ -158,7 +158,7 @@ h1 {
 .todo__deleteButton {
     color: rgb(255, 255, 255);
     border: none;
-    background-image: url(/img/trash.png);
+    background-image: url(/todo/img/trash.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 0rem;
