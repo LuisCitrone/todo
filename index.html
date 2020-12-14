@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="icon" href="./img/favicon.png" sizes="32x32">
+    <title>ToDo</title>
+</head>
+
+<body>
+    <main class="main--style">
+        <h1>Daily To-Do list manager</h1>
+        <div class="todo__container">
+            <section class="date__section">
+                <div class="date__dayName"></div>
+                <div class="date__numericDate"></div>
+            </section>
+            <section class="input__section">
+                <input class="add__input" type="text" name="todo__input" id="" placeholder="Take the garbage out">
+                <button class="add__button">+</button>
+            </section>
+
+            <section class="pending__section">
+                <div class="chill__element">
+                    <img class="chill__element__image" src="./img/celebration (1).svg">
+                    <p class="chill__element__text">Time to chill! You have no todos.</p>
+                </div>
+                <div class="text__pending"></div>
+                <div class="todoList__container">
+                </div>
+            </section>
+
+            <section class="completed__section">
+                <div class="text__completed"></div>
+                <div class="todoCompletedList__container">
+                </div>
+            </section>
+
+            <section class="footer__buttons">
+                <button class="show__button">Show complete</button>
+                <button class="clear__button">Clear all</button>
+            </section>
+        </div>
+    </main>
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
