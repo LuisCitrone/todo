@@ -1,0 +1,233 @@
+html {
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main--style {
+    background-image: linear-gradient(rgb(247, 129, 100), rgb(248, 31, 16));
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+h1 {
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+.todo__container {
+    /* height: 48rem; */
+    width: 28rem;
+    border-radius: 5px;
+    border: 1px solid rgb(238, 238, 238);
+    background-color: rgb(244, 247, 252);
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.date__section {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0;
+}
+
+.date__dayName, .date__numericDate {
+    font-size: 1.2rem;
+    color: rgb(245, 30, 44);
+}
+
+.input__section {
+    display: flex;
+    flex-direction: row;
+}
+
+.add__input {
+    flex: 1 0 auto;
+    font-size: 1rem;
+    text-indent: 1rem;
+    height: 2.5rem;
+    border-radius: 3px;
+    border: 1px solid rgb(221, 221, 221);
+}
+
+.add__input:focus {
+    outline: none;
+    border: 1px solid #7687e7;
+    transition: border .6s;
+}
+
+.add__input::placeholder {
+    font-style: italic;
+    color: rgba(180, 180, 179, .7);
+}
+
+.add__button {
+    width: 3.5rem;
+    margin-left: .5rem;
+    border: none;
+    border-radius: 3px;
+    background-color: rgb(221, 221, 221);
+    color: rgb(255, 255, 255);
+    font-size: 1.6rem;
+    cursor: pointer;
+    outline: none;
+}
+
+.add__button--active {
+    background-color: rgb(24, 21, 206);
+    transition: background-color .3s;
+}
+
+.pending__section {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.text__pending, .text__completed {
+    color: rgb(0, 0, 0);
+    margin-bottom: .5rem;
+}
+
+.text__pending--disable {
+    display: none;
+}
+
+.chill__element {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.chill__element--enable {
+    display: flex;
+}
+
+.chill__element__image {
+    width: 8rem;
+}
+
+.chill__element__text {
+    margin: 1rem 0;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: .8rem;
+}
+
+.todo__div {
+    background-color: rgb(167, 197, 253);
+    margin-bottom: .4rem;
+    display: flex;
+    align-items: stretch;
+    animation: fadeIn ease 1s;
+    height: 2.5rem;
+}
+
+.todoCompleted__div:hover .todo__deleteButton, .todo__div:hover .todo__deleteButton {
+    width: 2.5rem;
+    background-size: 1rem;
+}
+
+.todo__checkbox {
+    margin: 0 .8rem;
+    cursor: pointer;
+    align-self: center;
+}
+
+.todo__span {
+    color: rgb(0, 0, 0);
+    flex: 1 0 auto;
+    display: inline-flex;
+    align-items: center;
+}
+
+.todo__deleteButton {
+    color: rgb(255, 255, 255);
+    border: none;
+    background-image: url(/img/trash.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 0rem;
+    width: 0rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all ease-in 0.2s;
+    background-color: rgb(245, 100, 104);
+}
+
+.completed__section {
+    display: none;
+}
+
+.completed__section--show {
+    display: flex;
+    flex-direction: column;
+}
+
+.todoCompleted__div {
+    background-color: rgb(255, 255, 255);
+    margin-bottom: .5rem;
+    display: flex;
+    height: 2.5rem;
+    align-items: stretch;
+    animation: fadeIn ease 1s;
+}
+
+.todoCompleted__span {
+    text-decoration: line-through;
+    color: rgb(0, 0, 0);
+    flex: 1 0 auto;
+    display: inline-flex;
+    align-items: center;
+}
+
+.todo__checkbox {
+    margin: 0 .8rem;
+    cursor: pointer;
+}
+
+.footer__buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.show__button, .clear__button {
+    font-weight: bold;
+    font-size: .9rem;
+    cursor: pointer;
+    width: 8rem;
+    padding: .5rem;
+    border: none;
+    margin: 0 .5rem;
+    background-color: rgba(0, 0, 0, 0);
+    border: 3px solid rgba(0, 0, 0, 0);
+    outline: none;
+}
+
+.show__button:hover, .clear__button:hover {
+    border-bottom: 3px solid;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
